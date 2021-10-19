@@ -22,8 +22,11 @@ function execute() {
     const params = {
       Message: MESSAGE,
       TopicArn: TOPIC_ARN
-      Subject: SUBJECT
     };
+    
+    if (SUBJECT) {
+      params.Subject = SUBJECT;
+    }
 
     const awsClient = new AWS.SNS({ apiVersion: "2010-03-31" });
 
