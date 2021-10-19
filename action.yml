@@ -2,6 +2,9 @@ name: "AWS SNS - Publish Topic"
 author: "Kyle Johns"
 description: "Send a SNS Topic via GitHub Actions"
 inputs:
+  SUBJECT:
+    description: "The subject"
+    required: true
   MESSAGE:
     description: "The message you want to send"
     required: true
