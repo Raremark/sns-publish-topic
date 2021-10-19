@@ -12,6 +12,7 @@ Send a SNS Topic via GitHub Actions
 - name: Publish SNS Topic
   uses: nothingalike/sns-publish-topic@v1.6
   with:
+    SUBJECT: "subject"
     MESSAGE: "message"
     TOPIC_ARN: "arn:aws:sns:[your region]:[your account id]:[your topic name]"
   env:
@@ -21,6 +22,10 @@ Send a SNS Topic via GitHub Actions
 ```
 
 ## Inputs
+
+### `SUBJECT`
+
+**Required** This is the subject
 
 ### `MESSAGE`
 
