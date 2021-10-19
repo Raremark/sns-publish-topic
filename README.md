@@ -25,7 +25,7 @@ Send a SNS Topic via GitHub Actions
 
 ### `SUBJECT`
 
-**Required** This is the subject
+**Optional** This is the subject
 
 ### `MESSAGE`
 
