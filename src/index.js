@@ -9,6 +9,7 @@ function execute() {
     
     const MESSAGE = core.getInput("MESSAGE");
     const TOPIC_ARN = core.getInput("TOPIC_ARN");
+    const SUBJECT = core.getInput("SUBJECT");
 
     AWS.config.update({
       region: AWS_REGION,
@@ -21,6 +22,7 @@ function execute() {
     const params = {
       Message: MESSAGE,
       TopicArn: TOPIC_ARN
+      Subject: SUBJECT
     };
 
     const awsClient = new AWS.SNS({ apiVersion: "2010-03-31" });
